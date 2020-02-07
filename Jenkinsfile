@@ -6,6 +6,12 @@ pipeline {
                 sh 'python --version'
             }
         }
+        stage('test') {
+            steps {
+                sh 'ps aux >> ps.res'
+            }
+        }
+
     }
     post {
         always {
