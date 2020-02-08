@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker 'python:3.6.6' }
+    agent { docker 'python:3.6.5' }
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'python --version >> py.version'
             }
         }
         stage('test') {
